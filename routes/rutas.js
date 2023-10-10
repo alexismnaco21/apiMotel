@@ -11,11 +11,12 @@ let controladorReserva = new ControladorReserva ();
 export let rutas=express.Router()
 
 rutas.post('/api/habitaciones', controladorHabitacion.registrarHabitacion)
-rutas.get('/api/habitacion', controladorHabitacion.buscarHabitacionPorId)
+rutas.get('/api/habitacion/:id', controladorHabitacion.buscarHabitacionPorId)
 rutas.get('/api/habitaciones',controladorHabitacion.buscarHabitaciones)
-rutas.put('/api/habitaciones',controladorHabitacion.modificarHabitacion)
-rutas.delete('/api/habitaciones', controladorHabitacion.modificarHabitacion)
+rutas.put('/api/habitaciones/:id',controladorHabitacion.modificarHabitacion)
+rutas.delete('/api/habitaciones/:id', controladorHabitacion.borrarHabitacion)
 
+//reservas
 rutas.post('/api/reservas', controladorReserva.registrarReserva)
 rutas.get('/api/reserva', controladorReserva.buscarReserva)
 rutas.get('/api/reservas',controladorReserva.buscarReservas)

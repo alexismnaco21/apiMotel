@@ -1,4 +1,8 @@
 import {Api} from './Api.js'
+import 'dotenv/config'
+
+require('dotenv').config()
+
 //Para usar una clase debo crear un objeto
 //Para usar una clase se debe crear una instancia
 // Todo objeto es una variable
